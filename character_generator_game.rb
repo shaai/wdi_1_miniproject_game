@@ -27,6 +27,8 @@ courage = gets.chomp
 class Character
 
   def Initalize(name)
+    @name = name
+    @power_number = rand(10)
   end
 
 end
