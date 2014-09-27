@@ -26,6 +26,9 @@ courage = gets.chomp
 
 class Character
 
+  def Initalize(name)
+  end
+
 end
 
 
