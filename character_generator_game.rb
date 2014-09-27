@@ -19,14 +19,14 @@ name1 = gets.chomp
 
 
 
-puts ""
-agility = gets.chomp
-strength = gets.chomp
-courage = gets.chomp
+# puts ""
+# agility = gets.chomp
+# strength = gets.chomp
+# courage = gets.chomp
 
 class Character
 
-  def Initalize(name)
+  def Initialize(name)
     @name = name
     @power_number = rand(10)
   end
