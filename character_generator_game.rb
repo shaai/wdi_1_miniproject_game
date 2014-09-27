@@ -8,7 +8,9 @@
 # Prompts to battle again. If so, then starts again
 
 
-puts ""
+puts "An evil monster has taken over the city of Boston."
+puts "We need brave heroes to save our city."
+puts "Create a character to fight the evil monster."
 
 
 puts "Type your characters name:"
