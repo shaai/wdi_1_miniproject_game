@@ -11,6 +11,7 @@
 puts "An evil monster has taken over the city of Boston."
 puts "We need brave heroes to save our city."
 puts "Create a character to fight the evil monster."
+puts "---------------------------------------------------------------"
 puts "Give her/him a name:"
 name1 = gets.chomp
 
