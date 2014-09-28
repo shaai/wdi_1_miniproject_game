@@ -17,31 +17,6 @@ require 'pry'
 # name1 = gets.chomp
 # puts "Good! Now we "
 
-puts "Welcome to BATTLE WARRIORS!"
-puts "_____________________________________________"
-puts "Create a new warrior to start a battle."
-puts "Let's start by giving your warrior a name:"
-warrior_one = gets.chomp
-
-puts "Thank you! We now have warrior #{warrior_one} ready to fight."
-puts "Would you like #{warrior_one} to fight against the computer or another warrior?"
-puts "Type 'computer' or 'warrior' to continue:"
-answer = gets.chomp.downcase
-
-if answer == "computer"
-  puts "You chose to fight against the computer! Let the BATTLE begin!"
-elsif answer == "warrior"
-  puts "You chose to fight against another warrior."
-  puts "Let's create a second warrior by giving him/her a name. Type his/her name below:"
-  warrior_two = gets.chomp
-end
-
-
-# puts ""
-# agility = gets.chomp
-# strength = gets.chomp
-# courage = gets.chomp
-
 class Character
 
   def Initialize(name)
@@ -56,6 +31,35 @@ class Monster
     @monster_power = rand(10)
   end
 end
+
+
+puts "Welcome to BATTLE WARRIORS!"
+puts "_____________________________________________"
+puts "Create a new warrior to start a battle."
+puts "Let's start by giving your warrior a name:"
+warrior_one = gets.chomp.upcase
+
+puts "Thank you! We now have warrior #{warrior_one} ready to fight."
+puts "Would you like #{warrior_one} to fight against the computer or another warrior?"
+puts "Type 'computer' or 'warrior' to continue:"
+answer = gets.chomp.downcase
+
+if answer == "computer"
+  puts "You chose to fight against the computer! Let the BATTLE begin!"
+elsif answer == "warrior"
+  puts "You chose to fight against another warrior."
+  puts "Let's create a second warrior by giving him/her a name. Type his/her name below:"
+  warrior_two = gets.chomp.upcase
+  puts "Warrior #{warrior_two} is ready to fight! Let the battle between #{warrior_one} and #{warrior_two} begin!!!!"
+end
+
+
+# puts ""
+# agility = gets.chomp
+# strength = gets.chomp
+# courage = gets.chomp
+
+
 
 
 
