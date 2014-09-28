@@ -17,7 +17,7 @@ require 'pry'
 # name1 = gets.chomp
 # puts "Good! Now we "
 
-class Character
+class Fighter
 
   def Initialize(name)
     @name = name
@@ -26,15 +26,9 @@ class Character
 
 end
 
-class Monster
-  def Initialize
-    @monster_power = rand(10)
-  end
-end
 
 
-puts "Welcome to BATTLE WARRIORS!"
-puts "_____________________________________________"
+puts "___________Welcome to BATTLE WARRIORS!___________"
 puts "Create a new warrior to start a battle."
 puts "Let's start by giving your warrior a name:"
 warrior_one = gets.chomp.upcase
@@ -46,12 +40,25 @@ answer = gets.chomp.downcase
 
 if answer == "computer"
   puts "You chose to fight against the computer! Let the BATTLE begin!"
+
+  new_warrior_one = Fighter.new(warrior_one)
+  computer = Fighter.new("COMPUTER")
+
 elsif answer == "warrior"
   puts "You chose to fight against another warrior."
   puts "Let's create a second warrior by giving him/her a name. Type his/her name below:"
   warrior_two = gets.chomp.upcase
   puts "Warrior #{warrior_two} is ready to fight! Let the battle between #{warrior_one} and #{warrior_two} begin!!!!"
+
+  new_warrior_one = Fighter.new(warrior_one)
+  new_warrior_two = Fighter.new(warrior_two)
+
+  else
+    puts "Something went wrong. Please start the game again."
 end
+
+
+
 
 
 # puts ""
