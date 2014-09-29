@@ -25,7 +25,36 @@ require 'pry'
 #   elsif type =
 # end
 
-slayer_set = {}
+
+
+# def create_slayers(slayer_set)
+#   puts "Create a Dragon Slayer by giving her/him a name:"
+#   slayer_name = gets.chomp.upcase
+#   puts "Your slayer can be an elf, human, or dwarf. Which of these three will #{slayer_name} be?"
+#   type = gets.chomp.downcase
+#   puts "Good, #{slayer_name}, a #{type} has been added to your clan."
+#   slayer_type = fight_power(type)
+#   slayer_set[slayer_name.to_sym] = slayer_type
+# end
+
+def name
+  puts "Create a Dragon Slayer by giving her/him a name:"
+  slayer_name = gets.chomp.upcase
+  slayer_name.to_sym
+end
+
+def type
+  puts "Your slayer can be an elf, human, or dwarf. Which of these three will he/she be?"
+  type = gets.chomp.downcase
+  slayer_type = fight_power(type)
+end
+
+
+
+# def put_into_hash()
+#   slayer_set[slayer_name.to_sym] = slayer_type
+#   slayer_set
+# end
 
 
 def fight_power(type)
@@ -73,14 +102,22 @@ end
 puts "___________Welcome to DRAGON SLAYERS!___________"
 puts "Create a clan of Dragon Slayers to fight against the Dragon."
 puts "Let's add slayers to your clan."
-puts "What's your first Dragon Slayer's name?"
-slayer_name = gets.chomp.upcase
-puts "Your slayer can be an elf, human, or dwarf. Which is of these three will #{slayer_name} be?"
-type = gets.chomp.downcase
-slayer_type = fight_power(type)
 
-# slayer = Fighter.new(slayer_name, slayer_type)
-slayer_set[slayer_name.to_sym] = slayer_type
+slayer_set = {}
+slayer_set[name] = type
+puts "Good, that dragon slayer has been added to your clan."
+
+puts "_____________________________________________________"
+
+puts "Want to add more dragon slayers to your clan?"
+puts "Type yes to add more or no to continue..."
+answer = gets.chomp.downcase
+
+if answer == "yes"
+  slayer_set[name] = type
+elsif answer == "no"
+  puts "Ok, in that case, let's get ready to slay the DRAGON!!!"
+end
 
 binding.pry
 
