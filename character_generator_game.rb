@@ -1,41 +1,4 @@
 require 'pry'
-# intro to game
-# prompt to choose one character track or two character track
-# prompt to give character name, traits & save user input
-# If one character, then generate random monster traits
-# For each character, generate a random level of agility, strength, and courage
-# puts text "battling.... x punched y, etc."
-# If multiple characters, then the one with the highest number, wins.
-# Prompts to battle again. If so, then starts again
-
-
-# puts "An evil monster has taken over the city of Boston."
-# puts "We need brave heroes to save our city."
-# puts "Create a character to fight the evil monster."
-# puts "---------------------------------------------------------------"
-# puts "Give her/him a name:"
-# name1 = gets.chomp
-# puts "Good! Now we "
-
-
-# def character_type(name,type)
-#   slayer_set[:name] = type
-#   if type == "elf"
-#     slayer_set << 3
-#   elsif type =
-# end
-
-
-
-# def create_slayers(slayer_set)
-#   puts "Create a Dragon Slayer by giving her/him a name:"
-#   slayer_name = gets.chomp.upcase
-#   puts "Your slayer can be an elf, human, or dwarf. Which of these three will #{slayer_name} be?"
-#   type = gets.chomp.downcase
-#   puts "Good, #{slayer_name}, a #{type} has been added to your clan."
-#   slayer_type = fight_power(type)
-#   slayer_set[slayer_name.to_sym] = slayer_type
-# end
 
 def name
   puts "Create a Dragon Slayer by giving her/him a name:"
@@ -50,13 +13,6 @@ def type
 end
 
 
-
-# def put_into_hash()
-#   slayer_set[slayer_name.to_sym] = slayer_type
-#   slayer_set
-# end
-
-
 def fight_power(type)
   if type == "elf"
     3
@@ -68,31 +24,18 @@ def fight_power(type)
 end
 
 
-# def put_into_hash(name,type)
-#     slayer_set.store(name.to_sym, type)
-# end
-
-# class Fighter
-#   attr_accessor :slayer_set
-
-#   def initialize(name, type)
-#     @slayer_set = {}
-#     @name = name.to_sym
-#     @type = type.to_i
-#   end
+def prompt
+  puts "Want to add another dragon slayer to your team?"
+  puts "Type YES to add or NO to continue alone..."
+end
 
 
-#   def put_into_hash(name,type)
-#     @slayer_set.store(name.to_sym, type)
-#   end
+# def while_loop(answer)
+#   while answer == "yes"
+#     slayer_set[name] = type
+#     prompt
+#   else
 
-# end
-
-
-
-# def battle
-#   while @power_number > 0
-#     @power -= rand(5..10)
 #   end
 # end
 
@@ -100,26 +43,47 @@ end
 
 
 puts "___________Welcome to DRAGON SLAYERS!___________"
-puts "Create a clan of Dragon Slayers to fight against the Dragon."
-puts "Let's add slayers to your clan."
+puts "We need a Dragon Slayer to fight against the Dragon."
 
 slayer_set = {}
 slayer_set[name] = type
-puts "Good, that dragon slayer has been added to your clan."
+puts "Good, that dragon slayer has been created."
 
 puts "_____________________________________________________"
 
-puts "Want to add more dragon slayers to your clan?"
-puts "Type yes to add more or no to continue..."
-answer = gets.chomp.downcase
+prompt
 
+answer = gets.chomp.downcase
 if answer == "yes"
   slayer_set[name] = type
-elsif answer == "no"
+else
   puts "Ok, in that case, let's get ready to slay the DRAGON!!!"
 end
 
+
+
+
+
 binding.pry
+
+
+
+
+
+
+
+
+
+
+# intro to game
+# prompt to choose one character track or two character track
+# prompt to give character name, traits & save user input
+# If one character, then generate random monster traits
+# For each character, generate a random level of agility, strength, and courage
+# puts text "battling.... x punched y, etc."
+# If multiple characters, then the one with the highest number, wins.
+# Prompts to battle again. If so, then starts again
+
 
 # puts "Thank you! We now have warrior #{warrior_one} ready to fight."
 # puts "Would you like #{warrior_one} to fight against the computer or another warrior?"
@@ -145,20 +109,3 @@ binding.pry
 #     puts "Something went wrong. Please start the game again."
 # end
 
-# puts ""
-
-
-
-
-# puts ""
-# agility = gets.chomp
-# strength = gets.chomp
-# courage = gets.chomp
-
-
-
-
-
-
-
-# binding.pry
