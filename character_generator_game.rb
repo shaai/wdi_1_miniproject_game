@@ -43,7 +43,6 @@ end
 #   while answer == "yes"
 #     slayer_set[name] = type
 #     prompt
-#   else
 
 #   end
 # end
@@ -63,11 +62,20 @@ puts "_____________________________________________________"
 prompt
 
 answer = gets.chomp.downcase
-if answer == "yes"
+while answer == "yes"
   slayer_set[name] = type
-else
-  puts "Ok, in that case, let's get ready to slay the DRAGON!!!"
+  puts "Good, that dragon slayer has been created."
+  prompt
 end
+
+puts "Ok, in that case, let's get ready to slay the DRAGON!!!"
+
+# answer = gets.chomp.downcase
+# if answer == "yes"
+#   slayer_set[name] = type
+# else
+#   puts "Ok, in that case, let's get ready to slay the DRAGON!!!"
+# end
 
 
 
