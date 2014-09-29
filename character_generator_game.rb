@@ -1,19 +1,28 @@
 require 'pry'
 
 def name
+  # method prompts the user for a character name and collects the user input
+  # no input arguments
+  # returns slayer_name as a symbol
   puts "Create a Dragon Slayer by giving her/him a name:"
   slayer_name = gets.chomp.upcase
   slayer_name.to_sym
 end
 
 def type
+  # method prompts the user for the character type (elf, human, or dwarf) and collects the user input
+  # no input arguments
+  # returns slayer_type as a fixnum
   puts "Your slayer can be an elf, human, or dwarf. Which of these three will he/she be?"
-  type = gets.chomp.downcase
-  slayer_type = fight_power(type)
+  type = gets.chomp.downcase   # at the end of this line, a string is returned
+  slayer_type = fight_power(type)   # at the end of this line, a fixnum is returned
 end
 
 
 def fight_power(type)
+  # method converts character type (elf, human, dwarf) into a fixnum to represent their fight power
+  # input is a string (from method above)
+  # returns one of three fixnums
   if type == "elf"
     3
   elsif type == "dwarf"
